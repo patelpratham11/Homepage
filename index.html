@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage</title>
+  </head>
+  <link rel="icon" href="icon.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <body>
+    <div id="leftbookmarks">
+      <a href="https://www.gmail.com" id="gmail">GMAIL</a>
+      <a href="https://my.pitt.edu" id="portal">PITT PORTAL</a>
+      <a href="https://www.b-ok.cc" id="library">Z-LIBRARY</a>
+      <a href="https://calendar.google.com/calendar/r" id="calendar">CALENDAR</a>
+      <a href="https://www.finance.yahoo.com" id="yahoo">YAHOO FINANCE</a>
+      <a href="https://www.tradingview.com" id="tradingview">TRADINGVIEW</a>
+      <a href="https://www.goodreads.com" id="goodreads">GOODREADS</a>
+      <a href="https://www.drive.google.com" id="drive">DRIVE</a>
+    </div>
+    <div id="middle"></div>
+      <div id="spin">
+        <div id="clockbox"></div>
+          <script type="text/javascript">
+          var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+          function GetClock(){
+          var d=new Date();
+          var nday=d.getDay(),nmonth=d.getMonth(),ndate=d.getDate();
+          var nhour=d.getHours(),nmin=d.getMinutes(),ap;
+          if(nhour==0){ap=" AM";nhour=12;}
+          else if(nhour<12){ap=" AM";}
+          else if(nhour==12){ap=" PM";}
+          else if(nhour>12){ap=" PM";nhour-=12;}
+          if(nmin<=9) nmin="0"+nmin;
+          var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nhour+":"+nmin+ap+"";
+          document.getElementById('clockbox').innerHTML=clocktext;
+          }
+          GetClock();
+          setInterval(GetClock,1000);
+          </script>
+        </div>
+      <div id="weatherOne">
+        <div id="nameOne"></div>
+        <div id="highOne"></div>
+        <div id="lowOne"></div>
+        <div id="feelslikeOne"></div>
+        <div id="weathersOne">
+          <svg
+            xmlns="http://www.w3.org/2000/svg" id="sunOne" color= "white" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3">
+            </line><line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="windOne" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="snowOne" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-snow"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="8" y1="20" x2="8.01" y2="20"></line><line x1="12" y1="18" x2="12.01" y2="18"></line><line x1="12" y1="22" x2="12.01" y2="22"></line><line x1="16" y1="16" x2="16.01" y2="16"></line><line x1="16" y1="20" x2="16.01" y2="20"></line></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="rainOne"width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-umbrella"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="cloudOne" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+        </div>
+<div id="weatherTwo">
+        
+        <div id="nameTwo"></div>
+        <div id="highTwo"></div>
+        <div id="lowTwo"></div>
+        <div id="feelslikeTwo"></div>
+        <div id="weathersTwo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg" id="sunTwo" color= "white" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3">
+            </line><line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="windTwo" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-wind"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="snowTwo" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud-snow"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><line x1="8" y1="16" x2="8.01" y2="16"></line><line x1="8" y1="20" x2="8.01" y2="20"></line><line x1="12" y1="18" x2="12.01" y2="18"></line><line x1="12" y1="22" x2="12.01" y2="22"></line><line x1="16" y1="16" x2="16.01" y2="16"></line><line x1="16" y1="20" x2="16.01" y2="20"></line></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="rainTwo"width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-umbrella"><path d="M23 12a11.05 11.05 0 0 0-22 0zm-5 7a3 3 0 0 1-6 0v-7"></path></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" id="cloudTwo" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cloud"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+        </div>
+      </div>
+      </div>
+      <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" id="ticker">
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "description": "DJI",
+      "proName": "DJI"
+    },
+    {
+      "description": "LDOS",
+      "proName": "LDOS"
+    },
+    {
+      "description": "BABA",
+      "proName": "BABA"
+    },
+    {
+      "description": "MDB",
+      "proName": "MDB"
+    },
+    {
+      "description": "NIO",
+      "proName": "NIO"
+    },
+    {
+      "description": "IBM",
+      "proName": "IBM"
+    },
+    {
+      "description": "UBER",
+      "proName": "UBER"
+    },
+    {
+      "description": "LYFT",
+      "proName": "LYFT"
+    },
+    {
+      "description": "AAL",
+      "proName": "AAL"
+    },
+    {
+      "description": "DAL",
+      "proName": "DAL"
+    },
+    {
+      "description": "NVDA",
+      "proName": "NVDA"
+    },
+    {
+      "description": "BYND",
+      "proName": "BYND"
+    },
+    {
+      "description": "ROKU",
+      "proName": "ROKU"
+    }
+  ],
+  "colorTheme": "dark",
+  "isTransparent": true,
+  "displayMode": "adaptive",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+  <div id="message">
+    <div id="time"> Good Morning</div>
+      <script type="text/javascript">
+        var today = new Date();
+        var hours = today.getHours();
+        var message;
+        if(hours>0 && hours<12){
+          message = "Good Morning";
+        }
+        if(hours>=12 && hours<=18){
+          message = "Good Afternoon";
+        }
+        if(hours>18 && hours<=23){
+          message = "Good Evening";
+        }
+        document.getElementById("time").innerHTML = message+", Pratham";
+      </script>
+
+
+
+  </div>
+
+  </body>
+  <script src="script.js">
+
+  </script>
+</html>
